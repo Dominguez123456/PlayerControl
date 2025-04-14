@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class SpiningPropellar : MonoBehaviour
 {
+    public float rotation;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -14,6 +16,6 @@ public class SpiningPropellar : MonoBehaviour
     void Update()
     {
         //Spin lil bro 
-
+        transform.Rotate(Vector3.forward * rotation * Time.deltaTime);
     }
 }
